@@ -11,7 +11,7 @@ source:
   sha256: 5ec61e50b4e3f3839221780715d8219c56ed60ee67f5db6e430f8beb6ceeef28
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name|lower }}-base
@@ -30,7 +30,6 @@ outputs:
         - openff-toolkit-base >=0.9.2
         - openff-interchange-base >=0.3.17
         - pytorch  # [unix]
-        - nnpops
         - __unix  # [unix]
     test:
       requires:
@@ -58,6 +57,7 @@ outputs:
         # parameterize molecules without needing extra installs
         - rdkit
         - __unix  # [unix]
+        - nnpops
     test:
       requires:
         - python {{ python_min }}
